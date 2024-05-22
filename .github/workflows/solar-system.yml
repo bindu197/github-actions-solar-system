@@ -5,7 +5,9 @@ on:
   push:
     branches:
       - main
-      - 'feature/*'
+      - 'feature/*'  
+      
+
 
 env:
   MONGO_URI: ‘mongodb+srv://supercluster.d83jj.mongodb.net/superData'
@@ -48,7 +50,7 @@ jobs:
       name: docker
       runs-on: ubuntu-latest
       needs: unit-testing
-      continue-on-error: true
+      if: always()
 
       steps:
         - name: Checkout Repository
