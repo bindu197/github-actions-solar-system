@@ -1,6 +1,7 @@
 name: Testing - Reusable Workflow
 on: 
-  ??????????
+  workflow_call:
+  
 jobs:
   integration-test:
     runs-on: ubuntu-latest
